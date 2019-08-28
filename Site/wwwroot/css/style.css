@@ -1,0 +1,121 @@
+﻿:root {
+    --main-bg: #212428;
+    --text-col: #ffffff;
+    --div-bg: #0a0b0c;
+}
+
+body {
+    background-color: var(--main-bg);
+}
+
+@media only screen and (max-width:750px) {
+
+    .welcomediv {
+        font-family: 'Roboto', sans-serif;
+        color: var(--text-col);
+        background-color: var(--div-bg);
+        border-radius: 20px;
+        display: block;
+        text-align: center;
+        margin: 0% 25% 0% 25%;
+        padding: 5px 0px 25px 2px;
+
+    }
+
+    .contentdiv {
+        font-family: 'Roboto', sans-serif;
+        color: var(--text-col);
+        background-color: var(--div-bg);
+        border-radius: 20px;
+        display: block;
+        text-align: center;
+        margin: 2% 25% 0% 25%;
+        padding: 5px 0px 25px 2px;
+    }
+
+    .contentimg {
+        height: 100px;
+        width: 70px;
+        padding-top: 25px;
+    }
+}
+
+@media only screen and (max-width:1280px) {
+
+    .welcomediv {
+        font-family: 'Roboto', sans-serif;
+        color: var(--text-col);
+        background-color: var(--div-bg);
+        border-radius: 20px;
+        display: block;
+        text-align: center;
+        margin: 0% 25% 0% 25%;
+        padding: 5px 0px 25px 2px;
+    }
+
+    .contentdiv {
+        font-family: 'Roboto', sans-serif;
+        color: var(--text-col);
+        background-color: var(--div-bg);
+        border-radius: 20px;
+        display: block;
+        text-align: center;
+        margin: 2% 25% 0% 25%;
+        padding: 5px 0px 25px 2px;
+    }
+
+    .contentimg {
+        height: 300px;
+        width: 300px;
+        padding-top: 25px;
+    }
+}
+
+@media only screen and (min-width:1281px) {
+
+    #navbar {
+        font-family: 'Roboto', sans-serif;
+        list-style: none;
+        list-style-type: none;
+        background-color: var(--div-bg);
+        padding-left: 50px;
+        color: white;
+        align-items: center;
+    }
+
+    .welcomediv {
+        font-family: 'Roboto', sans-serif;
+        color: var(--text-col);
+        background-color: var(--div-bg);
+        border-radius: 20px;
+        display: block;
+        text-align: center;
+        margin: 0% 25% 0% 25%;
+        padding: 5px 0px 25px 2px;
+    }
+
+    .contentdiv {
+        font-family: 'Roboto', sans-serif;
+        color: var(--text-col);
+        background-color: var(--div-bg);
+        border-radius: 20px;
+        display: block;
+        text-align: center;
+        margin: 2% 25% 0% 25%;
+        padding: 5px 0px 25px 2px;
+    }
+
+    .contentimg {
+        height: 350px;
+        padding-top: 25px;
+    }
+}
+
+#NoScript {
+    background-image: url(../Images/noscript.png);
+    background-repeat: no-repeat;
+}
+
+#ContentList {
+    list-style-type: none;
+}
