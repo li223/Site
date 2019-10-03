@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CHANDler API Documentation</title>
+
+    <meta charset="UTF-8" />
+    <meta name="description" content="This is the hack ass thing I call documentation" />
+    <meta name="author" content="Liam,Ryan" />
+    <meta name="keywords" content="CHANdler,chandler,chan,chanler,CHANler" />
+    <meta property="og:image" content="https://camo.githubusercontent.com/e1c0189cc57bc2e9e8e5be170dac695371ded38d/68747470733a2f2f692e6b796d2d63646e2e636f6d2f70686f746f732f696d616765732f6e657773666565642f3030302f3737392f3338382f6433332e6a7067">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://camo.githubusercontent.com/e1c0189cc57bc2e9e8e5be170dac695371ded38d/68747470733a2f2f692e6b796d2d63646e2e636f6d2f70686f746f732f696d616765732f6e657773666565642f3030302f3737392f3338382f6433332e6a7067" />
+    <link rel="stylesheet" href="~/css/style.css" type="text/css">
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/scripts.js"></script>
+    <noscript>
+        <meta http-equiv="refresh" content="0; URL='https://li223.dev/noscript'" />
+    </noscript>
+</head>
+
+<body>
+
+    <!--
+    <div class="side-bar">
+        <p>Notes</p>
+        <a href="#chandler">CHANdler</a>
+        <a href="#ratelimit">Ratelimits</a>
+
+        <p>Endpoints</p>
+        <a href="#board">Board</a>
+        <a href="#server">Server</a>
+        <a href="#thread">Thread</a>
+
+        <p>Objects</p>
+        <a href="chandler/objects#boardobject">Board Object</a>
+        <a href="chandler/objects#servermetaobject">ServerMeta Object</a>
+        <a href="chandler/objects#threadobject">Thread Object</a>
+    </div>
+        -->
+
+    <div class="contentdiv">
+        <h2 id="chandler">CHANdler</h2>
+        <p>CHANdler is image board software with an ASP.NET Core back-end and a static HTML front-end. This page contains the documentation for the API that this uses.</p>
+        <br />
+        <br />
+        <h3 id="ratelimit">Ratelimits</h3>
+        <p>Currently, there are no rate limits on the request but this is will change in the near future</p>
+    </div>
+    <div class="contentdiv">
+        <h2 id="board">Board Endpoints</h2>
+        <div class="api-cont">
+            <p>Get all boards</p>
+            <p>URL: <code>/api/board</code></p>
+            <p>Type: GET</p>
+            <p>Parameters: none</p>
+            <p>Returns: IEnumerable of <a href="chandler/objects#boardobject">Board</a></p>
+        </div>
+        <br />
+        <br />
+        <div class="api-cont">
+            <p>Get all boards</p>
+            <p>URL: <code>/api/board/data?tag={tag}</code></p>
+            <p>Type: GET</p>
+            <p>Parameters: tag - The tag of the board (string)</p>
+            <p>Returns: <a href="chandler/objects#boardobject">Board</a></p>
+        </div>
+
+        <h2 id="server">Server Endpoints</h2>
+        <div class="api-cont">
+            <p>Get metadata on the server</p>
+            <p>URL: <code>/api/server</code></p>
+            <p>Type: GET</p>
+            <p>Parameters: none</p>
+            <p>Returns: <a href="chandler/objects#servermetaobject">ServerMeta</a></p>
+        </div>
+
+        <h2 id="thread">Thread Endpoints</h2>
+        <div class="api-cont">
+            <p>Get threads</p>
+            <p>URL: <code>/api/thread?tag={tag}</code></p>
+            <p>Type: GET</p>
+            <p>Parameters: tag - The tag of the board (string)</p>
+            <p>Returns: IEnumerable of <a href="chandler/objects#threadobject">Thread</a></p>
+        </div>
+        <br />
+        <br />
+        <div class="api-cont">
+            <p>Get threads</p>
+            <p>URL: <code>/api/thread/single?id={id}</code></p>
+            <p>Type: GET</p>
+            <p>Parameters: id - The id of the thread (int)</p>
+            <p>Returns: <a href="chandler/objects#threadobject">Thread</a></p>
+        </div>
+        <br />
+        <br />
+        <div class="api-cont">
+            <p>Get posts on a thread</p>
+            <p>URL: <code>/api/thread/posts?id={id}</code></p>
+            <p>Type: GET</p>
+            <p>Parameters: id - The id of the thread (int, optional)</p>
+            <p>Returns: IEnumerable of <a href="chandler/objects#threadobject">Thread</a></p>
+        </div>
+        <br />
+        <br />
+        <div class="api-cont">
+            <p>Create a new post</p>
+            <p>URL: <code>/api/thread/create?id={id}</code></p>
+            <p>Type: POST</p>
+            <p>Body: <a href="chandler/objects#threadobject">Thread</a> Object in JSON format</p>
+            <p>Returns: The created <a href="chandler/objects#threadobject">Thread</a></p>
+        </div>
+        <br />
+        <br />
+        <div class="api-cont">
+            <p>Deletes a post</p>
+            <p>URL: <code>/api/thread/delete?postid={id}&pass={password}</code></p>
+            <p>Type: DELETE</p>
+            <p>Parameters:</p>
+            <br />
+            <ul>
+                <li>postid - The Id of the post to delete (optional)</li>
+                <li>pass - The password required to delete the post</li>
+            </ul>
+            <p>Returns: Empty 200 OK Response if sucessful</p>
+        </div>
+    </div>
+</body>
+</html>

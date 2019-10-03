@@ -106,7 +106,7 @@ body {
     }
 
     .contentimg {
-        height: 350px;
+        height: 250px;
         padding-top: 25px;
     }
 }
@@ -118,4 +118,9 @@ body {
 
 #ContentList {
     list-style-type: none;
+}
+
+.api-cont {
+    border: 5px solid gray;
+    border-radius: 5px;
 }
