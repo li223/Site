@@ -1,12 +1,10 @@
 using System.IO;
-using System.Net;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Npgsql;
+using Newtonsoft.Json;
 
 namespace Site
 {
@@ -31,6 +29,9 @@ namespace Site
             services.AddControllersWithViews()
                 .AddNewtonsoftJson();
             services.AddRazorPages();
+
+            var config = JsonConvert.DeserializeObject<Config>(File.ReadAllText("./config.json"));
+            services.AddSingleton(config);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

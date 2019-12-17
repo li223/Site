@@ -1,0 +1,35 @@
+﻿<head>
+    <title>Nerds</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Nerds" />
+    <meta property="og:image" content="https://li223.dev/Images/icon.png">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500" rel="stylesheet">
+    <link rel="icon" type="image/png" href="~/Images/icon.png" />
+    <link rel="stylesheet" href="~/css/style.css" type="text/css">
+    <noscript>
+        <meta http-equiv="refresh" content="0; URL='https://li223.dev/noscript'" />
+    </noscript>
+</head>
+<body>
+    <form action="/upload/action" enctype="multipart/form-data" method="post">
+        <label for="pw">Password: </label>
+        <input type="password" name="pw" />
+        <br />
+        <label for="type">Gif Type: </label>
+        <select name="type">
+            <option value="NA">--- Select Option ---</option>
+            <option value="dab">Dab</option>
+            <option value="headpat">Pat</option>
+            <option value="hug">Hug</option>
+            <option value="kiss">Kiss</option>
+            <option value="punch">Punch</option>
+            <option value="slap">Slap</option>
+        </select>
+        <br />
+        <label for="filedata">File: </label>
+        <input type="file" name="filedata" />
+        <br />
+        <input type="submit" />
+    </form>
+</body>
