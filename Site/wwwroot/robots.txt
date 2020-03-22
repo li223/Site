@@ -1,3 +1,6 @@
 UserAgent: *
 Allow: *
+Disallow: /Images/
 Disallow: /lib/
+Disallow: /static/
+Disallow: /api/
