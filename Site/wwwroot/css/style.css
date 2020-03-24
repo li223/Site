@@ -5,6 +5,11 @@
     --hov-col: #b3390c;
 }
 
+img {
+    height: 95%;
+    width: 100%;
+}
+
 body {
     background-color: var(--main-bg);
 }
@@ -17,6 +22,11 @@ div {
     margin-bottom: 0.25%;
 }
 
+ol {
+    list-style: none;
+    list-style-type: none;
+}
+
 h1 {
     color: white;
     text-align: center;
@@ -27,6 +37,10 @@ p {
     text-align: left;
     text-align: center;
     display: block;
+}
+
+a {
+    color: var(--hov-col);
 }
 
 #intro-div {
@@ -62,10 +76,9 @@ p {
 
 .main-footer {
     background-color: var(--div-bg);
-    position: absolute;
-    bottom: 0;
+    position: page;
+    margin: 5% 0px 0px 0px;
     overflow: hidden;
-    width: 98%;
 }
 
 .footer-item {
@@ -86,4 +99,54 @@ p {
     padding: 8px;
     text-align: center;
     padding: 14px 16px;
+}
+
+.project-div {
+    width: 200px;
+    height: 350px;
+    padding-bottom: 2%;
+    display: inline-block;
+    margin-left: 2%;
+    margin-top: 5%;
+    vertical-align: middle;
+}
+
+.project-link {
+    text-align: center;
+    display: block;
+}
+
+.project-img {
+    height: 100px;
+    width: 100px;
+    padding-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.project-h1tag {
+    font-size: 125%;
+}
+
+.project-ptag {
+    font-size: 100%;
+}
+
+.knowledge-div {
+    margin-top: 3%;
+    padding-bottom: 2%;
+}
+
+.knowledge-div p {
+    text-align: left;
+}
+
+.know-lipini {
+    color: var(--hov-col);
+}
+
+.know-li {
+    color: var(--text-col);
+    padding-top: 2%;
 }
