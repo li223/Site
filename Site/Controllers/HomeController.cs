@@ -14,9 +14,6 @@ namespace Site.Controllers
         [Route("Knowledge")]
         public IActionResult Knowledge() => View();
 
-        [Route("noscript")]
-        public IActionResult Noscript() => View();
-
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error() => View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier, ErrorCode = this.HttpContext.Response.StatusCode });
     }
